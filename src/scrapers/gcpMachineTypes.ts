@@ -7,7 +7,7 @@ import { generatePriceHash, generateProductHash } from '../db/helpers';
 import { upsertProducts } from '../db/upsert';
 import { findProducts } from '../db/query';
 
-// Is there a reason why this isn't just being pulled dynamically from https://cloud.google.com/compute/docs/reference/rest/v1/machineTypes/list ?
+// TODO: refactor to use compute.machineTypes.list()
 const machineTypeDescriptionLookups: {
   [key: string]: { [key: string]: string };
 } = {
